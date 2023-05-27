@@ -1,0 +1,242 @@
+nav {
+  background-color: #C12127;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  height: 50px;
+}
+
+nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.top-links {
+  display: inline-block;
+  float: right;
+  padding: 0;
+  margin: 0 20px 0 0;
+}
+
+.top-links li {
+  display: inline-block;
+  margin: auto 10px;
+}
+
+.search-bar {
+  align-items: center;
+  background-color: rgb(32, 101, 136);
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.npm-img, .bear-img {
+  width: 5%;
+}
+
+.npm-img img  {
+  width: 100%;
+}
+
+.bear-img img {
+  width: 50%;
+}
+
+.search-input {
+  margin: 0 5px;
+  width: 85%;
+}
+
+.search-input input {
+  margin-bottom: 5px;
+}
+
+#search-box {
+  width: 95%;
+}
+
+.search-input img {
+  margin: 5px 0 0 0;
+  padding: 0 5px;
+  width: 1.75%;
+}
+
+.search-bar span {
+  color: white;
+  font-size: 10px;
+  width: 5%;
+}
+
+.search-bar span a {
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.centered-info {
+  background-color: rgb(32, 101, 136);
+  background-image: url("images/city-scape.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.text-div {
+  height: 300px;
+  width: 75%;
+}
+
+h1 {
+  color: white;
+  font-family: Arial;
+  margin: 0;
+  padding: 5% 0 0 40%;
+}
+
+.text-div p {
+  color: white;
+  font-family: Arial;
+  font-size: 11px;
+  padding: 0 0 0 40%;
+}
+
+.text-div a {
+  background-color: rgb(240, 146, 51);
+  border: 1px solid rgb(240, 146, 51);
+  border-radius: 15px;
+  color: white;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 1% 0 0 40%;
+  padding: 5px 10px;
+}
+
+.collaboration-section {
+  background-color: rgb(39, 53, 71);
+  display: flex;
+  height: 400px;
+}
+
+.collab-img {
+  width: 60%;
+}
+
+.collab-img img {
+  padding: 5% 0 0 35%;
+  width: 65%;
+}
+
+.collab-text {
+  color: white;
+  font-family: Arial;
+  width: 40%;
+}
+
+.collab-text h2 {
+  margin: 10% 0 0 5%;
+}
+
+.collab-text ul li {
+  padding: 1.5% 0;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.signUp {
+  border: 1px solid rgb(203, 56, 55);
+  border-radius: 15px;
+  background-color: rgb(203, 56, 55);
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  margin-left: 5%;
+  padding: 5px 10px;
+}
+
+.collab-text p {
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+.collab-text p a {
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.whatis {
+  background-image: url("images/forklift.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  color: white;
+  font-family: Arial;
+}
+
+.whatis-box {
+  position: absolute;
+  left: 20%;
+  margin: 7.5% 0 0 0;
+}
+
+.whatis-box a {
+  color: white;
+  background-color: rgb(49, 68, 88);
+  border: 1px solid rgb(49, 68, 88);
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 12px;
+  font-family: Arial;
+  padding: 5px 15px;
+}
+
+.activities, .building-block {
+  font-family: Arial;
+  width: 100%;
+}
+
+.building-block h2, .building-block p {
+  text-align: center;
+}
+
+.building-block p {
+  font-size: 16px;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.activities article {
+  width: 20%;
+}
+
+.activities span {
+  color: rgb(208, 74, 73);
+}
+
+.description-activities img {
+  margin: 0 30%;
+}
+
+.description-activities h3 {
+  text-align: center;
+}
+
+.description-activities p {
+  text-align: center;
+  font-size: 12px;
+}

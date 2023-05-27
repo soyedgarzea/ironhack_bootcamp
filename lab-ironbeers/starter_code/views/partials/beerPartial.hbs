@@ -1,0 +1,14 @@
+<div class="container">
+
+	<div class="row d-flex justify-content-center align-items-center">
+		{{#each beers}}
+		<div class="col-4">
+			<img class="img-fluid mx-auto d-block" src={{this.image_url}} alt="">
+			<p class="h1">{{this.name}}</p>
+			<p class="text-muted">{{this.tagline}}</p>
+			<p>{{this.description}}</p>
+		</div>
+		{{/each}}
+	</div>
+	
+</div>
