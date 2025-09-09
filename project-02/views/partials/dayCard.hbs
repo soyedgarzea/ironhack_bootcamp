@@ -1,0 +1,12 @@
+<div class="card" style="width: 20%;">
+  <div class="card-header">
+    <h4>{{this.fecha}}</h4>
+  </div>
+  <div class="card-body">
+        {{#each this.horas}}
+            <p class="card-text"> 
+                <a href="#" role="button" class="btn btn-primary">{{this}}</a>
+            </p>
+        {{/each}}
+  </div>
+</div>

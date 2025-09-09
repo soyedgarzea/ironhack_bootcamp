@@ -1,0 +1,204 @@
+body {
+  background-color: #f7f7f2;
+}
+
+.dropdown-menu {
+  left: -100%;
+}
+
+.logo-nav {
+  height: 100%;
+  width: 100px;
+}
+
+.footer {
+  height: 10vh !important;
+}
+
+.titles {
+  color: #9d3030;
+  font-size: "Open Sans";
+  font-weight: 700;
+}
+
+.texts {
+  font-family: "Raleway";
+  color: #000000;
+}
+
+.btn-mpk {
+  background-color: #9d3030;
+}
+
+.bg-404 {
+  background-image: url("./images/bg-404.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 65vh;
+}
+
+.error {
+  color: #151518;
+  font-size: 42px;
+  font-size: "Open Sans";
+  font-weight: 700;
+}
+
+.no-print {
+  display: none !important;
+}
+
+/* home page */
+
+.index {
+  background-image: url("./images/bg-index.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+
+.main-title {
+  font-size: 52px;
+}
+
+.form-main {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 36px;
+  }
+  .form-main {
+    flex-direction: column;
+  }
+}
+
+.input-form-main {
+  border: none;
+}
+
+.intro-title {
+  font-size: 46px;
+}
+
+.benefits {
+  font-size: 20px;
+}
+
+ul .li-benefits {
+  font-size: 16px;
+}
+
+/* Sign up */
+
+.signup-form {
+  background-image: url("./images/bg-sign-form.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+
+.user-card {
+  background-color: #fcfcfc;
+  box-shadow: -10px -10px 20px 0px #565758, 10px 10px 20px 0px #151518;
+  border-radius: 10px;
+  height: 50vh;
+  transition: all 1s;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card ul li {
+  margin: 10px 0;
+}
+
+/* Log In Form */
+
+.login-form {
+  background-image: url("./images/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+
+/* Advanced Search */
+
+.s-title {
+  color: #9d3030;
+  font-size: 32px;
+}
+
+.s-doctor {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 25px;
+}
+
+/* Profile */
+
+.p-title {
+  font-size: 32px;
+}
+
+.border-boxes {
+  border: 3px solid #000000;
+}
+
+.profile-pic {
+  border: 3px solid black;
+  height: 150px;
+  width: 150px;
+}
+
+#photo {
+  font-size: 10px;
+}
+
+/* citas */
+.cards-container {
+  display: flex;
+  padding: 10% 20%;
+  justify-content: space-around;
+}
+
+/* Prescriptio */
+
+.prescription-area {
+  resize: none;
+  height: 200px !important;
+  width: 100%;
+}
+
+/* Animations */
+
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

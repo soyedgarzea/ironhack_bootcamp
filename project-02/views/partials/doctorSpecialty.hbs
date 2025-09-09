@@ -1,0 +1,30 @@
+<div class="form-group">
+    <label for="specialty" class="text-dark texts font-weight-bold">Especialidad</label>
+    <select class="form-control" name="specialty" id="specialty">
+        {{#if empty}}
+            <option class="texts" value="" selected>  </option>
+            <option value="Alergología" class="texts">Alergología</option>
+            <option value="Angiología" class="texts">Angiología</option>
+            <option value="Cardiología" class="texts">Cardiología</option>
+            <option value="Dermatología" class="texts">Dermatología</option>
+            <option value="Endocrinología" class="texts">Endocrinología</option>
+            <option value="Gastroenterología" class="texts">Gastroenterología</option>
+            <option value="Geriatría" class="texts">Geriatría</option>
+            <option value="Ginecología y obstetricia" class="texts">Ginecología y obstetricia</option>
+            <option value="Medicina familiar" class="texts">Medicina familiar</option>
+            <option value="Medicina interna" class="texts">Medicina interna</option>
+            <option value="Nefrología" class="texts">Nefrología</option>
+            <option value="Neumología" class="texts">Neumología</option>
+            <option value="Neurología" class="texts">Neurología</option>
+            <option value="Oncología" class="texts">Oncología</option>
+            <option value="Otorrinolaringología" class="texts">Otorrinolaringología</option>
+            <option value="Pediatría" class="texts">Pediatría</option>
+            <option value="Psiquiatría" class="texts">Psiquiatría</option>
+            <option value="Reumatología" class="texts">Reumatología</option>
+            <option value="Traumatología" class="texts">Traumatología</option>
+            <option value="Urología" class="texts">Urología</option>
+        {{else}}
+            <option class="texts" value="{{user.specialty}}" selected> {{user.specialty}} </option>
+        {{/if}}
+    </select>
+</div>

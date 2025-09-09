@@ -1,0 +1,143 @@
+<div class="row my-5 justify-content-around align-items-center signup-form">
+	<div class="col-md-3 col-5 my-5 py-4 user-card d-flex flex-column justify-content-center align-items-center">
+		<div class="row my-3">
+			<div class="col-12">
+				<h2 class="text-center titles">Médico</h2>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="col-12">
+				<ul>
+					<li class="texts">Lleva el control de tus pacientes</li>
+					<li class="texts">Lleva el control de tu agenda</li>
+					<li class="texts">Promociona tu consultorio</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center align-items-center">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupDoctorModal">
+					Regístrate
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-5 my-5 py-4 user-card d-flex flex-column justify-content-center align-items-center">
+		<div class="row my-3">
+			<div class="col-12">
+				<h2 class="text-center titles">Paciente</h2>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="col-12">
+				<ul>
+					<li class="texts">Lleva un registro de tu expediente</li>
+					<li class="texts">Busca médicos por tu zona</li>
+					<li class="texts">Busca instituciones médicas</li>
+					<li class="texts">Solicita consulta con médicos</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center align-items-center">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupPacientModal">
+					Regístrate
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="signupDoctorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/signup/doctor" method="POST">
+			<div class="form-group">
+				<label for="inputName">Nombre</label>
+				<input type="text" class="form-control" name="inputName" aria-describedby="NameHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputPaternalLastName">Apellido</label>
+				<input type="text" class="form-control" name="inputPaternalLastName" aria-describedby="NameHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputIDcard">Cédula Profesional</label>
+				<input type="number" class="form-control" name="inputIDcard" aria-describedby="IDcardHelp">
+				<small id="IDcardHelp" class="form-text text-muted">Es necesario validar tu profesión.</small>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail">Correo Electrónico</label>
+				<input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword">Contraseña</label>
+				<input type="password" class="form-control" name="inputPassword">
+			</div>
+			<div class="form-group">
+				<label for="inputConfirmPassword">Confirma Contraseña</label>
+				<input type="password" class="form-control" name="inputConfirmPassword">
+			</div>
+			{{#if messageDoc}}
+			<div class="error-message">{{ messageDoc }}</div>
+			<script> $('#signupDoctorModal').modal('show'); </script>			
+			{{/if}}
+			<button type="submit" class="btn btn-primary">Regístrate</button>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signupPacientModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/signup/patient" method="POST">
+			<div class="form-group">
+				<label for="inputName">Nombre</label>
+				<input type="text" class="form-control" name="inputName" aria-describedby="NameHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputPaternalLastName">Apellido</label>
+				<input type="text" class="form-control" name="inputPaternalLastName" aria-describedby="NameHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputEmail">Correo Electrónico</label>
+				<input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword1">Contraseña</label>
+				<input type="password" class="form-control" name="inputPassword">
+			</div>
+			<div class="form-group">
+				<label for="inputConfirmPassword">Confirma Contraseña</label>
+				<input type="password" class="form-control" name="inputConfirmPassword">
+			</div>
+			{{#if messagePat}}
+			<div class="error-message">{{ messagePat }}</div>
+			<script> $('#signupPacientModal').modal('show'); </script>
+			{{/if}}
+			<button type="submit" class="btn btn-primary">Regístrate</button>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

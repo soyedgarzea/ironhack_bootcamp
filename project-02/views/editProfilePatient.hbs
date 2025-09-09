@@ -1,0 +1,76 @@
+
+<div class="row justify-content-center align-items-center my-5 animated fadeIn">
+	<div class="col-10 my-5">
+		<form action="/profile/patient/edit" method="POST" enctype="multipart/form-data">
+			<div class="form-row">
+				<div class="col-md-2 col-12">
+					<div class="form-group d-flex flex-column justify-content-start align-items-center">
+						<img class="rounded-circle profile-pic" src="{{user.profilePic}}" alt="">
+						<input class="texts mt-5" id="photo" type="file" name="photo" >
+					</div>
+				</div>
+				<div class="col-md-10 col-12">
+					<div class="form-group">
+						<label for="name" class="text-dark texts font-weight-bold">Nombre</label>
+						<input type="text" name='name' id="name" class="form-control"
+							value="{{user.name}}" placeholder="{{user.name}}">
+					</div>
+					<div class="form-group">
+						<label for="paternalLastName" class="text-dark texts font-weight-bold">Apellido Paterno</label>
+						<input type="text" name="paternalLastName" id="paternalLastName" class="form-control"
+							value="{{user.paternalLastName}}" placeholder="{{user.paternalLastName}}">
+					</div>
+					<div class="form-group">
+						<label for="maternalLastName" class="text-dark texts font-weight-bold">Apellido Materno</label>
+						<input type="text" name="maternalLastName" id="maternalLastName" class="form-control"
+							value="{{user.maternalLastName}}" placeholder="{{user.maternalLastName}}">
+					</div>
+					<div class="form-group">
+						<label for="birthdate" class="text-dark texts font-weight-bold">Fecha de nacimiento</label>
+						<input type="date" name="birthdate" id="birthdate" class="form-control"
+							value="{{user.birthdate}}" placeholder="{{user.birthdate}}">
+					</div>
+					<div class="form-group">
+						<label for="weight" class="text-dark texts font-weight-bold">Peso (kg)</label>
+						<input type="number" name='weight' min="0" max="200" id='weight' class="form-control"
+							value="{{user.weight}}" placeholder="{{user.weight}}">
+					</div>
+					<div class="form-group">
+						<label for="height" class="text-dark texts font-weight-bold">Altura (m)</label>
+						<input type="number" name='height' min="0" max="2" step="0.01" id='height' class="form-control"
+							value="{{user.height}}" placeholder="{{user.height}}">
+					</div>
+					<div class="form-group">
+						<label for="bloodType" class="text-dark texts font-weight-bold">Tipo de Sangre</label>
+						<select class="form-control" name="bloodType" id="bloodType">
+							<option class="texts" value="{{user.bloodType}}" selected>{{user.bloodType}}</option>
+							<option class="texts" value="A+">A+</option>
+							<option class="texts" value="A-">A-</option>
+							<option class="texts" value="B+">B+</option>
+							<option class="texts" value="B-">B-</option>
+							<option class="texts" value="O+">O+</option>
+							<option class="texts" value="O-">O-</option>
+							<option class="texts" value="AB+">AB+</option>
+							<option class="texts" value="AB-">AB-</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="oldPassword" class="text-dark texts font-weight-bold">Contraseña</label>
+						<input type="password" name='oldPassword' id='oldPassword' class="form-control mb-3"  placeholder="Contraseña">
+						<input type="password" name='newPassword' id='newPassword' class="form-control my-3"  placeholder="Nueva Contraseña">
+						<input type="password" name='confirmPassword' id='confirmPassword' class="form-control my-3" 
+							placeholder="Confirmar Contraseña">
+						{{#if messagePassword}}
+						<div class="error-message">{{ messagePassword }}</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+			<div class="form-row justify-content-center align-items-center my-5">
+				<div class="col-6">
+					<button type="submit" class="btn btn-block btn-mpk texts text-white">Actualizar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

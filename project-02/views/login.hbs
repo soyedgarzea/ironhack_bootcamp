@@ -1,0 +1,113 @@
+<div class="row my-5 justify-content-around align-items-center login-form">
+	<div class="col-md-3 col-11 my-5 py-2 user-card d-flex flex-column justify-content-center align-items-center animated fadeIn">
+		<div class="row my-3">
+			<div class="col-12">
+				<h2 class="text-center titles">Médico</h2>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="col-12">
+				<ul>
+					<li class="texts">Revisa y actualiza tu agenda</li>
+					<li class="texts">Envía recetas</li>
+					<li class="texts">Revisa y actualiza tu consultorio</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center align-items-center">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#doctorModal">
+					Inicia sesión
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-11 my-5 py-4 user-card d-flex flex-column justify-content-center align-items-center animated fadeIn">
+		<div class="row my-3">
+			<div class="col-12">
+				<h2 class="text-center titles">Paciente</h2>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="col-12">
+				<ul>
+					<li class="texts">Busca un médico</li>
+					<li class="texts">Revisa tu expediente</li>
+					<li class="texts">Revisa tus próximas consultas</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center align-items-center">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pacientModal">
+					Inicia sesión
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="doctorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/login/doctor" method="POST">
+					<div class="form-group">
+						<label for="inputEmail">Correo Electrónico</label>
+						<input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+						<label for="inputPassword">Contraseña</label>
+						<input type="password" class="form-control" name="inputPassword">
+					</div>
+					{{#if messageDoc}}
+					<div class="error-message">{{ messageDoc }}</div>
+					<script> $('#doctorModal').modal('show'); </script>			
+					{{/if}}
+					<button type="submit" class="btn btn-primary">Inicia sesión</button>
+				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="pacientModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/login/patient" method="POST">
+			<div class="form-group">
+				<label for="inputEmail">Correo Electrónico</label>
+				<input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword1">Contraseña</label>
+				<input type="password" class="form-control" name="inputPassword">
+			</div>
+			{{#if messagePat}}
+			<div class="error-message">{{ messagePat }}</div>
+			<script> $('#pacientModal').modal('show'); </script>
+			{{/if}}
+			<button type="submit" class="btn btn-primary">Inicia sesión</button>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

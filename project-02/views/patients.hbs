@@ -1,0 +1,7 @@
+<h1>Patients</h1>
+
+{{#each patients}}
+  <p>
+    <a href="/patients/{{this._id}}">{{this.name}} {{this.paternalLastName}}</a>
+  </p>
+{{/each}}

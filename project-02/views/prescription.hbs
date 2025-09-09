@@ -1,0 +1,165 @@
+<div class="row justify-content-center align-items-center my-5 animated fadeIn">
+	<div class="col-12 my-5">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-11">
+				<h2 class="s-title titles">Nueva Receta</h2>
+			</div>
+		</div>
+		{{#if patients}}
+		<div class="row justify-content-center align-items center animated fadeIn">
+			<div class="col-10">
+				<form action="/prescription/getPatientInfo" method="GET">
+					<div class="form-row">
+						<div class="col-5">
+							<label for="patient" class="texts">Paciente</label>
+							<select class="custom-select" id="patient" name="patient" required>
+								{{#each patients}}
+								<option value="{{this._id}}">{{this.name}} {{this.paternalLastName}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+					<div class="form-row my-3">
+						<div class="col-5 d-flex justify-content-start align-items-center">
+							<button type="submit" class="btn btn-mpk texts text-white">Obtener información</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		{{else}}
+		<div class="row justify-content-center align-items-center mb-5 animated fadeIn">
+			<div class="col-10">
+				<form action="/prescription/newPrescription" method="POST">
+					<div class="form-row">
+						<div class="col-12">
+							<label for="" class="texts font-weight-bold border-bottom my-3">MÉDICO</label>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="doctorName" class="texts">Nombre</label>
+							<select class="custom-select block-select" id="doctorName" name="doctorName" readonly>
+								<option value="{{user.name}}">{{user.name}}</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-12 my-2">
+							<label for="doctorPaternalLastName" class="texts">Apellido</label>
+							<select class="custom-select block-select" id="doctorPaternalLastName" name="doctorPaternalLastName" readonly>
+								<option value="{{user.paternalLastName}}"> {{user.paternalLastName}}</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-12 my-2">
+							<label for="doctorIDcard" class="texts">Cédula</label>
+							<select class="custom-select block-select" id="doctorIDcard" name="doctorIDcard" readonly>
+								<option value="{{user.idCard}}"> {{user.idCard}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-12">
+							<label for="" class="texts font-weight-bold border-bottom my-3">PACIENTE</label>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientID" class="texts">ID Paciente</label>
+							<select class="custom-select" id="patientID" name="patientID" readonly>
+								<option class="form-control texts" name="patientID" value="{{patient._id}}">
+									{{patient._id}}
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientName" class="texts">Nombre</label>
+							<select class="custom-select" id="patientName" name="patientName" readonly>
+								<option class="form-control texts" name="patientName" value="{{patient.name}}">
+									{{patient.name}}
+								</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientPaternalLastName" class="texts">Apellido</label>
+							<select class="custom-select" id="patientPaternalLastName" name="patientPaternalLastName" readonly>
+								<option class="form-control texts" name="patientPaternalLastName" value="{{patient.paternalLastName}}">
+									{{patient.paternalLastName}}
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientAge" class="texts">Edad Paciente</label>
+							<select class="custom-select" id="patientAge" name="patientAge" readonly>
+								<option class="form-control texts" name="patientAge" value="{{patient.age}}">
+									{{patient.age}}
+								</option>
+							</select>
+						</div>
+						<div class="col-4"></div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-3 col-6 my-2">
+							<label for="bloodType" class="texts">Tipo de Sangre</label>
+							<select class="custom-select" id="bloodType" name="bloodType" readonly>
+								<option class="form-control texts" name="bloodType" value="{{patient.bloodType}}">
+									{{patient.bloodType}}
+								</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-6 my-2">
+							<label for="height" class="texts">Altura</label>
+							<select class="custom-select" id="height" name="height" readonly>
+								<option class="form-control texts" name="height" value="{{patient.height}} m">
+									{{patient.height}} m
+								</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-6 my-2">
+							<label for="weight" class="texts">Peso</label>
+							<select class="custom-select" id="weight" name="weight" readonly>
+								<option class="form-control texts" name="weight" value="{{patient.weight}} kg">
+									{{patient.weight}} kg
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-3 col-6 my-2">
+							<label for="bodyTemperature" class="text-dark texts font-weight-bold">Temperatura</label>
+							<input type="text" name='bodyTemperature' id="bodyTemperature" class="form-control"
+								value="" placeholder="32 ℃">
+						</div>
+						<div class="col-md-3 col-6 my-2">
+							<label for="allergies" class="text-dark texts font-weight-bold">Alergias</label>
+							<input type="text" name='allergies' id="allergies" class="form-control"
+								value="" placeholder="Penicilina">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-3 my-2">
+							<label for="date" class="texts">Fecha</label>
+							<input type="text" class="form-control texts" name="date" value="{{date}}" readonly>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-3 my-2">
+							<label for="dx" class="texts">Diagnóstico</label>
+							<input type="text" class="form-control texts" name="dx" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-10 my-2">
+							<label for="treatment" class="texts">Tratamiento</label>
+							<textarea class="form-control mb-3 prescription-area" id="treatment" name="treatment" placeholder="Tratamiento" required></textarea>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-mpk texts text-white">Generar Receta</button>
+				</form>
+			</div>
+		</div>
+		{{/if}}
+	</div>
+</div>

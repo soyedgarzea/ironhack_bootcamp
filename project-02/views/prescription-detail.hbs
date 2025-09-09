@@ -1,0 +1,37 @@
+<div class="row">
+	<div class="col-12 my-5">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-10">
+				<h3 class="title">
+					Fecha : {{prescription.date}}
+				</h3>
+				<p class="texts">Diagnóstico : {{prescription.dx}}</p>
+				<p class="texts">Doctor : {{prescription.doctorName}} </p>
+				<p class="texts">Cédula : {{prescription.doctorIDcard}} </p>
+				<hr>
+				<p class="texts">Paciente : {{prescription.patientName}} {{prescription.patientPaternalLastName}}</p>
+				<p class="texts">Paciente : {{prescription.patientPaternalLastName}} </p>
+				<p class="texts">Edad : {{prescription.patientAge}} </p>
+				<p class="texts">Tipo de Sangre : {{prescription.bloodType}} </p>
+				<p class="texts">Altura : {{prescription.height}} </p>
+				<p class="texts">Peso : {{prescription.weight}} </p>
+				<p class="texts">Temperatura : {{prescription.bodyTemperature}} </p>
+				<p class="texts">Alergias : {{prescription.allergies}} </p>
+				<hr>
+				<p class="texts">Tratamiento :  </p>
+				<p class="texts">{{prescription.treatment}} </p>
+			</div>
+			<div class="col-10 d-flex justify-content-center align-items-center">
+				<button type="submit" class="btn btn-mpk texts text-white" label="Imprimir"
+          onclick="openPrinter()"
+          class="no-print">Imprimir</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function openPrinter() {
+		console.log('printing')
+		window.print()
+	}
+</script>

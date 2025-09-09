@@ -1,0 +1,56 @@
+
+<div class="row justify-content-center align-items-center animated fadeIn">
+	<div class="col-11 my-5">
+		<form action="/profile/doctor/edit" method="POST" enctype="multipart/form-data">
+			<div class="form-row">
+				<div class="col-md-2 col-12 d-flex flex-column align-items-center">
+					<img class="rounded-circle profile-pic" src="{{user.profilePic}}" alt="">
+					<input class="texts mt-5" id="photo" type="file" name="photo" >
+				</div>
+				<div class="col-md-10 col-12">
+					<div class="form-group">
+						<label for="name" class="text-dark texts font-weight-bold">Nombre</label>
+						<input type="text" name='name' id="name" class="form-control" 
+							value="{{user.name}}" placeholder="{{user.name}}">
+					</div>
+					<div class="form-group">
+						<label for="paternalLastName" class="text-dark texts font-weight-bold">Apellido Paterno</label>
+						<input type="text" name="paternalLastName" id="paternalLastName" class="form-control" 
+							value="{{user.paternalLastName}}" placeholder="{{user.paternalLastName}}">
+					</div>
+					<div class="form-group">
+						<label for="maternalLastName" class="text-dark texts font-weight-bold">Apellido Materno</label>
+						<input type="text" name="maternalLastName" id="maternalLastName" class="form-control" 
+							value="{{user.maternalLastName}}" placeholder="{{user.maternalLastName}}">
+					</div>
+					<div class="form-group">
+						<label for="idCard" class="text-dark texts font-weight-bold">Cédula</label>
+						<input type="number" name="idCard" id="idCard" class="form-control" 
+							value="{{user.idCard}}" placeholder="{{user.idCard}}">
+					</div>
+					{{> doctorSpecialty}}
+					<div class="form-group">
+						<label for="location" class="text-dark texts font-weight-bold">Consultorio</label>
+						<input type="text" name='location' id='location' class="form-control" 
+							value="{{user.address.streetAddress}} {{user.address.borough}} " placeholder="{{user.address.streetAddress}} {{user.address.borough}} ">
+					</div>
+					<div class="form-group">
+						<label for="oldPassword" class="text-dark texts font-weight-bold">Contraseña</label>
+						<input type="password" name='oldPassword' id='oldPassword' class="form-control mb-3"  placeholder="Contraseña">
+						<input type="password" name='newPassword' id='newPassword' class="form-control my-3"  placeholder="Nueva Contraseña">
+						<input type="password" name='confirmPassword' id='confirmPassword' class="form-control my-3" 
+							placeholder="Confirmar Contraseña">
+						{{#if messagePassword}}
+						<div class="error-message">{{ messagePassword }}</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+			<div class="form-row justify-content-center align-items-center my-5">
+				<div class="col-6">
+					<button type="submit" class="btn btn-block btn-mpk texts text-white">Actualizar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

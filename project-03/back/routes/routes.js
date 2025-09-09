@@ -1,0 +1,41 @@
+const express = require("express");
+const router = express.Router();
+const uploader = require("../config/cloudinary");
+const Logged = require("../controllers/logged");
+const SignUp = require("../controllers/signup");
+const ValidateEmail = require("../controllers/validateEmail");
+const ValidateUsername = require("../controllers/validateUsername");
+const Profile = require("../controllers/profile");
+const Contact = require("../controllers/contact");
+const AddStuff = require("../controllers/addStuff");
+const StuffResults = require("../controllers/stuffResults");
+const GetStuff = require("../controllers/getStuff");
+const DeleteStuff = require("../controllers/deleteStuff");
+const ToggleAvailability = require("../controllers/toggleAvailability");
+const Login = require("../controllers/login");
+const LogOut = require("../controllers/logOut");
+const Verificate = require("../controllers/verificate");
+const EditProfile = require("../controllers/editProfile");
+const UploadPhoto = require("../controllers/uploadPhoto");
+const AddRecommendation = require("../controllers/addRecommendation");
+
+/* Routes */
+router.get("/logged", Logged);
+router.post("/signup", SignUp);
+router.post("/login", Login);
+router.get("/validate-email/:email", ValidateEmail);
+router.get("/validate-username/:username", ValidateUsername);
+router.post("/upload-photo", uploader.single("img"), UploadPhoto);
+router.post("/add-new-stuff", AddStuff);
+router.post("/verificate-account", Verificate);
+router.get("/search/:stuff", StuffResults);
+router.get("/stuff/:id", GetStuff);
+router.get("/profile/:username", Profile);
+router.get("/contact/:username", Contact);
+router.post("/delete-stuff/:stuff", DeleteStuff);
+router.post("/toggle-stuff/:stuff", ToggleAvailability);
+router.post("/add-recommendation/:userId", AddRecommendation);
+router.post("/edit-profile/:username", EditProfile);
+router.post("/logout", LogOut);
+
+module.exports = router;

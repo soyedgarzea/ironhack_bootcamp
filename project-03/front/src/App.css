@@ -1,0 +1,507 @@
+.titles {
+  font-family: "Raleway", sans-serif;
+}
+
+.text {
+  font-family: "Quicksand", sans-serif;
+}
+
+button,
+.buttonP,
+.btn {
+  transition: all 0.5s !important;
+}
+
+.buttonP:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-loader .modal-dialog .modal-content {
+  border: none;
+}
+
+body {
+  margin: 0;
+}
+
+.navbarP {
+  height: 10vh;
+  margin: 0;
+  padding: 0 !important;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.navbarP-link {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0;
+}
+
+.navbarP-link:hover {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+
+.navbarP-item {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem 1.5rem;
+  text-decoration: none;
+}
+
+.navbarP-item:hover {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+
+.logo-nav {
+  width: 50px;
+}
+
+@media (max-width: 540px) {
+  .navbarP .navbar form {
+    width: 50%;
+  }
+
+  .navbarP .navbar .navbar-brand {
+    margin: 0;
+  }
+}
+
+.home {
+  background-image: url("/images/home-bg.png");
+  background-size: cover;
+  margin-top: 9.5vh;
+  height: 100vh;
+}
+
+@media (max-width: 540px) {
+  .home {
+    margin-top: 8.5vh;
+    background-position: center;
+  }
+}
+
+.search-row {
+  height: 90vh;
+}
+
+.search-col {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-col p {
+  font-family: "Raleway";
+  font-size: 32px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.form-box {
+  margin: 25px 0;
+  width: 75%;
+}
+
+.result-page {
+  background-image: url("/images/result-bg.png");
+  background-size: cover;
+  min-height: 90vh;
+  margin-top: 9vh;
+}
+
+.results-col {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.results-col p {
+  font-family: "Raleway";
+  font-size: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.form-results-box {
+  width: 75%;
+}
+
+.results-card:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .results-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-results-box {
+    margin: 25px 0;
+    width: 75%;
+  }
+}
+
+.register-page {
+  background-image: url("/images/register-bg.png");
+  background-size: cover;
+  object-fit: cover;
+  margin-top: 9vh;
+}
+
+.register-svg {
+  width: 250px;
+}
+
+@media (max-width: 768px) {
+  .register-page {
+    background-image: url("/images/register-bg-mob.png");
+  }
+}
+
+.signup-page {
+  background-image: url("/images/signup-bg.png");
+  background-size: cover;
+  object-fit: cover;
+  margin-top: 9.5vh;
+  height: 90vh;
+}
+
+.signup-row {
+  justify-content: start;
+  align-items: center;
+}
+
+.signup-box {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  margin-left: 20%;
+}
+
+@media (max-width: 768px) {
+  .signup-row {
+    justify-content: center;
+  }
+
+  .signup-box {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.success-page {
+  background-image: url("/images/validate-bg.png");
+  background-size: cover;
+  margin-top: 9.5vh;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.success-added-page {
+  background-image: url("/images/added-stuff-bg.png");
+  background-size: cover;
+  margin-top: 9.5vh;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.success-row {
+  justify-content: center;
+  align-items: center;
+}
+
+.verification-page {
+  background-image: url("/images/verification-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 8.5vh;
+  height: 90vh;
+}
+
+.failed-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.login-page {
+  background-image: url("/images/login-bg.png");
+  background-size: cover;
+  object-fit: cover;
+  margin-top: 9vh;
+  height: 90vh;
+}
+
+.login-row {
+  justify-content: start;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  margin-left: 25%;
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    background-image: url("/images/login-mobile-bg.png");
+    background-position: center;
+    margin-top: 8.5vh;
+  }
+  .login-row {
+    justify-content: center;
+  }
+
+  .login-box {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+.profile-page {
+  margin-top: 10vh;
+  min-height: 90vh;
+}
+
+.profile-main-row {
+  background: linear-gradient(
+    0deg,
+    rgba(18, 17, 17, 0.9066001400560224) 0%,
+    rgba(30, 30, 31, 1) 50%
+  );
+  box-shadow: 0px 20px 20px 0px rgba(88, 88, 88, 0.55);
+}
+
+.profile-row {
+  border-bottom: 1px solid rgba(88, 88, 88, 0.5);
+}
+
+.profile-box-row {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.img-stuff-profile {
+  object-fit: cover;
+}
+
+.span-available {
+  border-bottom: 5px solid white;
+}
+
+.span-lend {
+  color: #a26464;
+  border-bottom: 5px solid #a26464;
+}
+
+.profile-recommendation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form .contact-col textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    margin-top: 6vh;
+  }
+
+  .profile-main-row {
+    margin-top: 3rem !important;
+  }
+
+  .profile-box-row {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profile-list {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .profile-list > * {
+    margin: 20px 0;
+  }
+}
+
+.edit-profile-page {
+  background-image: url("/images/signup-bg.png");
+  background-size: cover;
+  margin-top: 9.5vh;
+  height: 100vh;
+}
+
+.edit-profile-row {
+  justify-content: start;
+  align-items: center;
+}
+
+.edit-profile-box {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  margin-left: 20%;
+}
+
+.edit-profile-modal {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+}
+
+@media (max-width: 992px) {
+  .edit-profile-page {
+    background-position: center;
+    margin-top: 8.5vh;
+    height: 100vh;
+  }
+
+  .edit-profile-box {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.addStuff-page {
+  background-image: url("/images/add-stuff-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 9.5vh;
+  height: 90vh;
+}
+
+.addStuff-row {
+  justify-content: start;
+  align-items: center;
+}
+
+.addStuff-box {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  margin-left: 20%;
+}
+
+@media (max-width: 992px) {
+  .addStuff-page {
+    background-position: right;
+    margin-top: 8.5vh;
+  }
+
+  .addStuff-box {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.contact-page {
+  margin-top: 10vh;
+}
+
+.contact-main-row {
+  background: linear-gradient(
+    0deg,
+    rgba(18, 17, 17, 0.9066001400560224) 0%,
+    rgba(30, 30, 31, 1) 50%
+  );
+  padding: 3rem 0;
+}
+
+.contact-cols {
+  border-bottom: 1px solid white;
+}
+
+.form-control {
+  border: none;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.36);
+}
+
+@media (max-width: 992px) {
+  .contact-main-row {
+    padding: 0;
+  }
+
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-col {
+    margin: 10px 0px;
+  }
+}
+
+.contact-important-cols {
+  background-color: #e41459;
+}
+
+option {
+  padding-left: 10px;
+}
+
+option:checked {
+  background-color: #c0e0ff;
+  border-radius: 10px;
+}
+
+.contact-article-img {
+  height: 75px;
+  width: 75px;
+}
+
+.notfound-page {
+  background-image: url("/images/not-found-bg.png");
+  background-size: cover;
+  margin-top: 9.5vh;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer {
+  background-color: #343a40;
+  padding: 25px;
+}
+
+.logo-footer {
+  width: 100px;
+}
+
+.text-footer {
+  color: white;
+  text-align: center;
+}

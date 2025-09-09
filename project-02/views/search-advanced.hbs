@@ -1,0 +1,38 @@
+<div class="row justify-content-center align-items-center my-5 animated fadeIn">
+	<div class="col-12 my-5">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-11">
+				<h2 class="s-title titles">Búsqueda Avanzada</h2>
+			</div>
+			<div class="col-11">
+				<form action="/search/advanced" method="GET">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							{{> boroughPartial}}
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							{{> doctorSpecialty}}
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Buscar</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="row justify-content-around align-items-center my-5">
+			{{#if doctors}}
+				{{#each doctors}}
+					{{> searchResultPartial}}
+				{{/each}}
+			{{else}}
+				<div class="col-10 align-self-center my-5">
+					<h2 class="error">
+						No hemos encontrado doctores de con esta Especialidad
+					</h2>
+				</div>
+			{{/if}}
+		</div>
+	</div>
+</div>

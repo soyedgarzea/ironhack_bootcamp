@@ -1,0 +1,132 @@
+<div class="row animated fadeIn">
+	<div class="col-12 my-5">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-11">
+				<div class="row">
+					<div class="col-11 col-md-2 d-flex justify-content-center align-items-start">
+						<img class="rounded-circle profile-pic" src="{{user.profilePic}}" alt="">
+					</div>
+					<div class="col-10">
+						<div class="row">
+							<div class="col-12">
+								<h2 class="titles p-title">
+									{{user.name}} {{user.paternalLastName}} {{user.maternalLastName}}
+								</h2>
+							</div>
+							<div class="col-12">
+								<h4>
+									{{user.email}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4> Edad: {{user.age}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4>
+									Peso (kg): {{user.weight}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4>
+									Altura (m): {{user.height}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4>
+									Tipo de Sangre: {{user.bloodType}}
+								</h4>
+							</div>
+							<div class="col-12 d-flex justify-content-start align-items-center my-3">
+								<a href="/profile/{{user.role}}/edit">
+									<button type="submit" class="btn btn-dark">Editar</button>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h2 class="titles p-title">
+									Previas Citas
+								</h2>
+								<div class="row justify-content-start align-items-center">
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<h2 class="titles p-title">
+									Próximas citas
+								</h2>
+								<div class="row justify-content-start align-items-center">
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+									<div class="col-md-3 col-10 mx-1 my-2 border-boxes border-dark rounded">
+										<p class="my-1 font-weight-bold">Cita :</p>
+										<p class="my-1 font-weight-bold">Fecha :</p>
+										<p class="my-1 font-weight-bold">Consultorio :</p>
+										<p class="my-1 font-weight-bold">Doctor :</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-5">
+							<div class="col-12">
+								<h2 class="titles p-title">
+									Expediente
+								</h2>
+								<div class="row justify-content-start align-items-center">
+									{{#each user.prescriptions}}
+										<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex flex-column justify-content-center align-items-center">
+											<a href="/prescription/receta/{{this._id}}" class="texts">
+												<p class="my-1">{{this.dx}}</p>
+												<p class="my-1">{{this.date}}</p>
+											</a>
+										</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
